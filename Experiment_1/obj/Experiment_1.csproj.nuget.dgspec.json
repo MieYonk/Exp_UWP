@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Git\\UWP\\Experiment_1\\Experiment_1.csproj": {}
+    "E:\\Git\\Exp_UWP\\Experiment_1\\Experiment_1.csproj": {}
   },
   "projects": {
-    "E:\\Git\\UWP\\Experiment_1\\Experiment_1.csproj": {
+    "E:\\Git\\Exp_UWP\\Experiment_1\\Experiment_1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git\\UWP\\Experiment_1\\Experiment_1.csproj",
+        "projectUniqueName": "E:\\Git\\Exp_UWP\\Experiment_1\\Experiment_1.csproj",
         "projectName": "Experiment_1",
-        "projectPath": "E:\\Git\\UWP\\Experiment_1\\Experiment_1.csproj",
+        "projectPath": "E:\\Git\\Exp_UWP\\Experiment_1\\Experiment_1.csproj",
         "packagesPath": "C:\\Users\\xhy\\.nuget\\packages\\",
-        "outputPath": "E:\\Git\\UWP\\Experiment_1\\obj\\",
+        "outputPath": "E:\\Git\\Exp_UWP\\Experiment_1\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "UsingMicrosoftNETSdk": false,

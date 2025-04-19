@@ -11,21 +11,24 @@
     <Grid>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="300"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Width="288" TextWrapping="Wrap" Text="Image List" TextAlignment="Center" VerticalAlignment="Top" FontSize="30" Height="47"/>
-            <TextBlock TextWrapping="Wrap" Text="Image Preview" TextAlignment="Center" VerticalAlignment="Top" FontSize="30" Height="47" Grid.Column="1"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" Text="Image List" TextAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+            <TextBlock Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" Text="Image Preview" TextAlignment="Center" VerticalAlignment="Center" FontSize="30"  />
 
             <!-- 使用 ListBox 并监听 SelectionChanged -->
-            <ListBox x:Name="ImageList" Height="675" Background="AliceBlue" VerticalAlignment="Top" Margin="0,45,0,0" SelectionChanged="ImageList_SelectionChanged">
+            <ListBox Grid.Row="1" x:Name="ImageList" Background="AliceBlue" VerticalAlignment="Stretch"  SelectionChanged="ImageList_SelectionChanged">
                 <ListBoxItem Content="Image 1" Tag="/Assets/img1.png"/>
                 <ListBoxItem Content="Image 2" Tag="/Assets/img2.png"/>
                 <ListBoxItem Content="Image 3" Tag="/Assets/img3.png"/>
             </ListBox>
 
-            <Image x:Name="Image_Preview" Grid.Column="1" HorizontalAlignment="Center" Height="675" VerticalAlignment="Top" Width="843" Margin="0,45,0,0">
-
+            <Image Grid.Row="1" x:Name="Image_Preview" Grid.Column="1" HorizontalAlignment="Center"  VerticalAlignment="Center" >
             </Image>
         </Grid>
     </Grid>

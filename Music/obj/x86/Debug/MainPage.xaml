@@ -1,0 +1,71 @@
+﻿<Page
+    x:Class="Music.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Music"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Black">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="15*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" Background="#FF258B74" CornerRadius="0">
+                <TextBlock Text="PlayList" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <!--音频列表:playList-->
+            <ListBox x:ConnectionId='9' x:Name="playList" Grid.Row="1"                                             >
+                <ListBoxItem Content="路边一条" Tag="IMG_6051.mp4"></ListBoxItem>
+                <ListBoxItem Content="恐龙" Tag="IMG_7309.mp4"></ListBoxItem>
+                <ListBoxItem Content="雪乡表演" Tag="IMG_6271.mp4"></ListBoxItem>
+            </ListBox>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="16*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <!--音频播放界面:mediaElement-->
+            <MediaElement x:ConnectionId='2' x:Name="mediaElement" AutoPlay="False" Grid.Row="0" Grid.Column="0"/>
+            <!--滚动条界面-->
+            <Slider x:ConnectionId='3' x:Name="slider1" Grid.Row="1"  Background="#FF1B4A96" BorderThickness="100" Foreground="#FF258B74"                                    />
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <!--播放和快进后退按钮-->
+                <Button x:ConnectionId='4' x:Name="btn1" Grid.Column="2" HorizontalAlignment="Center" Background="#FF4A4141"                   >
+                    <TextBlock x:ConnectionId='8' x:Name="btn1TextBlock" FontFamily="Segoe UI Symbol" Text="&#xE102;" FontSize="40" RequestedTheme="Dark" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Button>
+
+                <Button x:ConnectionId='5' x:Name="btn2" Grid.Column="1" HorizontalAlignment="Center" Background="#FF4A4141"                   >
+                    <TextBlock FontFamily="Segoe UI Symbol" Text="&#xE112;" FontSize="40" RequestedTheme="Dark"/>
+                </Button>
+                <Button x:ConnectionId='6' x:Name="btn3" Grid.Column="3" HorizontalAlignment="Center" Background="#FF4A4141"                   >
+                    <TextBlock FontFamily="Segoe UI Symbol" Text="&#xE111;" FontSize="40" RequestedTheme="Dark"/>
+                </Button>
+
+                <!--音量调节:volumeSlider-->
+                <Slider x:ConnectionId='7'  Grid.Column="4" x:Name="volumeSlider" Background="#FF1B4A96" BorderThickness="100" Foreground="#FF258B74"                                          VerticalAlignment="Center"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
+
